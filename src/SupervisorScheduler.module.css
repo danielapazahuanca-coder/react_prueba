@@ -1,0 +1,205 @@
+/* src/SupervisorScheduler.module.css */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.configSection {
+  padding: 30px;
+  background: #f8f9fa;
+}
+
+.configSection h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.formGroup input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btnCalculate {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btnCalculate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btnCalculate:active {
+  transform: translateY(0);
+}
+
+.alert {
+  margin: 20px 30px;
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+}
+
+.alert.show {
+  display: block;
+}
+
+.alertError {
+  background: #fee;
+  border: 2px solid #fcc;
+  color: #c33;
+}
+
+.alertSuccess {
+  background: #efe;
+  border: 2px solid #cfc;
+  color: #3c3;
+}
+
+.alert h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 30px;
+  background: #f0f0f0;
+  border-top: 2px solid #ddd;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendBox {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.stateS { background: #3498db; }
+.stateI { background: #f39c12; }
+.stateP { background: #27ae60; }
+.stateB { background: #e74c3c; }
+.stateD { background: #95a5a6; }
+.stateDefault { background: white; color: #ccc; border: 1px solid #ddd; }
+
+.resultsSection {
+  padding: 30px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  min-width: 35px;
+}
+
+th {
+  background: #34495e;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.supervisorLabel {
+  background: #ecf0f1;
+  font-weight: 700;
+  color: #2c3e50;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+.cellS { background: #3498db; color: white; font-weight: bold; }
+.cellI { background: #f39c12; color: white; font-weight: bold; }
+.cellP { background: #27ae60; color: white; font-weight: bold; }
+.cellB { background: #e74c3c; color: white; font-weight: bold; }
+.cellD { background: #95a5a6; color: white; font-weight: bold; }
+.cellEmpty { background: white; color: #ccc; }
+
+.countRow {
+  background: #e8f4f8;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.countError {
+  background: #ffcccc !important;
+  color: #c33 !important;
+}
